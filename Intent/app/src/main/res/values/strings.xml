@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="pindah_activity">Pindah Activity</string>
+    <string name="move_activity">This is Move Activity</string>
+    <string name="back">Back</string>
+    <string name="pindah_activity_data">pindah activity dengan data</string>
+    <string name="data_diterima">Data has not received</string>
+    <string name="pindah_dengan_object">pindah dengan object</string>
+    <string name="move_activity_data">This is Move Activity with Data</string>
+    <string name="move_activity_object">This is Move Activity with Object</string>
+    <string name="pindah_activity_nothing">There is nothing guys\n lets back~</string>
+</resources>

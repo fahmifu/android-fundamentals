@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".move_for_result"
+    android:background="@color/darkmode"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvcn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Choose Number"
+        android:textColor="@color/putih"
+        android:textSize="20sp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvcn"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb150"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="150"
+            android:textColor="@color/putih"
+            android:buttonTint="@color/green"/>
+        <RadioButton
+            android:id="@+id/rb200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="200"
+            android:textColor="@color/putih"
+            android:buttonTint="@color/green"/>
+        <RadioButton
+            android:id="@+id/rb250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="250"
+            android:textColor="@color/putih"
+            android:buttonTint="@color/green"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPilih"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_number"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Choose"
+        android:textColor="@color/putih"
+        android:background="@color/green"/>
+</RelativeLayout>
