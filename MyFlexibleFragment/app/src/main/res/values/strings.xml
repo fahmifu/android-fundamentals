@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyFlexibleFragment</string>
+    <string name="hello_home_fragment">Hello, it\'s a Home Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_fragment">it\'s a Category Fragment</string>
+    <string name="categoryLifestyle">ke fragment lifestyle</string>
+    <string name="categoryName">Category Name</string>
+    <string name="categoryDescription">Cartegory Description</string>
+    <string name="to_profile">Ke Halaman Profile Activity</string>
+    <string name="show_dialog">Tampilkan sebuah dialog</string>
+</resources>
