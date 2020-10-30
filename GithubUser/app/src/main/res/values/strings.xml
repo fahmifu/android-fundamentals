@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Github User</string>
-
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="unique"> 000 </string>
+    <string name="followers">followers ·</string>
+    <string name="following">following</string>
     <!-- Other string resources-->
 
     <string-array name="username">
