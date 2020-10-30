@@ -23,30 +23,94 @@
         android:text="@string/name"
         android:textColor="@color/whiteGrey"
         android:textStyle="bold"
-        android:textSize="18sp"/>
+        android:textSize="18.5sp"/>
 
     <TextView
         android:id="@+id/txt_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
         android:layout_toEndOf="@id/img_photo"
         android:layout_below="@id/txt_name"
         android:text="@string/username"
+        android:textSize="15.5sp"
         android:textColor="@color/whiteGrey1"/>
 
-    <TextView
-        android:id="@+id/txt_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/followerfollowing"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
         android:layout_toEndOf="@id/img_photo"
         android:layout_below="@id/txt_username"
-        android:text="@string/unique"
-        android:textColor="@color/whiteGrey1"
-        android:maxLines="2"/>
+        android:layout_marginTop="11dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/followerfollowing_icon"/>
 
+    <TextView
+        android:id="@+id/txt_number_of_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/followerfollowing"
+        android:layout_below="@id/txt_username"
+        android:text="@string/unique"
+        android:textColor="@color/whiteGrey1" />
+
+    <TextView
+        android:id="@+id/follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/txt_number_of_followers"
+        android:layout_below="@id/txt_username"
+        android:text="@string/followers"
+        android:textColor="@color/whiteGrey1" />
+    
+    <TextView
+        android:id="@+id/txt_number_of_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/follower"
+        android:layout_below="@id/txt_username"
+        android:text="@string/unique"
+        android:textColor="@color/whiteGrey1" />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/txt_number_of_following"
+        android:layout_below="@id/txt_username"
+        android:text="@string/following"
+        android:textColor="@color/whiteGrey1" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/img_photo"
+        android:layout_below="@id/followerfollowing"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/star_icon"/>
+
+    <TextView
+        android:id="@+id/txt_number_of_repository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/star"
+        android:layout_below="@id/followerfollowing"
+        android:text="@string/unique"
+        android:textColor="@color/whiteGrey1" />
 
 </RelativeLayout>
