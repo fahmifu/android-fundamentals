@@ -6,290 +6,328 @@
     android:orientation="vertical"
     android:background="@color/dark">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:padding="16dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_photo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="25dp"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/txt_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_photo"
-            android:layout_marginTop="20dp"
-            android:text="@string/name"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="@color/whiteGrey"/>
-
-        <TextView
-            android:id="@+id/txt_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_name"
-            android:text="@string/username"
-            android:textSize="20sp"
-            android:textColor="@color/whiteGrey1"/>
-
-        <ImageView
-            android:id="@+id/followerfollowing"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_below="@id/txt_username"
-            android:layout_marginTop="11dp"
-            android:src="@drawable/followerfollowing_icon"/>
-
-        <TextView
-            android:id="@+id/txt_number_of_followers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@id/followerfollowing"
-            android:layout_below="@id/txt_username"
-            android:text="@string/unique"
-            android:textColor="@color/whiteGrey" />
-
-        <TextView
-            android:id="@+id/follower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@id/txt_number_of_followers"
-            android:layout_below="@id/txt_username"
-            android:text="@string/followers"
-            android:textColor="@color/whiteGrey" />
-
-        <TextView
-            android:id="@+id/txt_number_of_following"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@id/follower"
-            android:layout_below="@id/txt_username"
-            android:text="@string/unique"
-            android:textColor="@color/whiteGrey" />
-
-        <TextView
-            android:id="@+id/following"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@id/txt_number_of_following"
-            android:layout_below="@id/txt_username"
-            android:text="@string/following"
-            android:textColor="@color/whiteGrey" />
-
-        <ImageView
-            android:id="@+id/star"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="3dp"
-            android:layout_toEndOf="@+id/following"
-            android:layout_below="@id/txt_username"
-            android:layout_marginTop="11dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/star_icon"/>
-
-        <TextView
-            android:id="@+id/txt_number_of_repository"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@id/star"
-            android:layout_below="@id/txt_username"
-            android:text="@string/unique"
-            android:textColor="@color/whiteGrey" />
-
-        <ImageView
-            android:id="@+id/company"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_below="@id/followerfollowing"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/company_icon"/>
-
-        <TextView
-            android:id="@+id/txt_company"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/followerfollowing"
-            android:layout_toEndOf="@id/company"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="3dp"
-            android:text="@string/unique"
-            android:textColor="@color/whiteGrey"/>
-
-        <ImageView
-            android:id="@+id/location"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginTop="8dp"
-            android:layout_below="@id/company"
-            android:src="@drawable/location_icon"/>
-
-        <TextView
-            android:id="@+id/txt_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/company"
-            android:layout_toEndOf="@id/location"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="3dp"
-            android:text="@string/unique"
-            android:textColor="@color/whiteGrey"/>
-
-        <HorizontalScrollView
-            android:id="@+id/hs1"
-            android:layout_below="@id/location"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:scrollbarTrackHorizontal="@id/rl1">
-
-            <RelativeLayout
-                android:id="@+id/rl1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/dark2">
-
-                <ImageView
-                    android:id="@+id/overviewIcon"
-                    android:layout_width="19dp"
-                    android:layout_height="19dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/overview_icon"/>
-
-                <TextView
-                    android:id="@+id/overview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/overviewIcon"
-                    android:text="Overview"
-                    android:textColor="@color/whiteGrey"/>
-
-                <ImageView
-                    android:id="@+id/repository_icon"
-                    android:layout_width="19dp"
-                    android:layout_height="19dp"
-                    android:layout_toEndOf="@id/overview"
-                    android:layout_marginStart="20dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/repositories_icon"/>
-
-                <TextView
-                    android:id="@+id/repository"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/repository_icon"
-                    android:layout_centerVertical="true"
-                    android:text="Repositories·"
-                    android:textColor="@color/whiteGrey"/>
-
-                <TextView
-                    android:id="@+id/txt_number_of_repository1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/repository"
-                    android:text="@string/unique"
-                    android:textColor="@color/whiteGrey"/>
-
-                <ImageView
-                    android:id="@+id/projectIcon"
-                    android:layout_width="19dp"
-                    android:layout_height="19dp"
-                    android:layout_toEndOf="@id/txt_number_of_repository1"
-                    android:layout_marginStart="20dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/projects_icon"/>
-
-                <TextView
-                    android:id="@+id/project"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/projectIcon"
-                    android:textColor="@color/whiteGrey"
-                    android:text="Projects"/>
-
-                <ImageView
-                    android:id="@+id/packageIcon"
-                    android:layout_width="19dp"
-                    android:layout_height="19dp"
-                    android:layout_toEndOf="@id/project"
-                    android:layout_marginStart="20dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/packages_icon"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/packageIcon"
-                    android:layout_centerVertical="true"
-                    android:text="Packages"
-                    android:textColor="@color/whiteGrey"/>
-            </RelativeLayout>
-        </HorizontalScrollView>
-
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/hs1"
-            android:layout_marginTop="15dp"
-            android:background="@color/dark2"
             android:padding="16dp">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true" />
+
             <TextView
-                android:id="@+id/create"
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/img_photo"
                 android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
-                android:text="Create your own GitHub profiles"
-                android:textColor="@color/whiteGrey"
+                android:text="@string/name"
+                android:textSize="26sp"
                 android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textColor="@color/whiteGrey"/>
 
             <TextView
-                android:id="@+id/createdes"
+                android:id="@+id/txt_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/create"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Sign up for your own profile on GitHub, the best place to host code, manage projects, and build software alongside 50 million developers."
-                android:textAlignment="center"
+                android:layout_below="@id/txt_name"
+                android:text="@string/username"
+                android:textSize="20sp"
+                android:textColor="@color/whiteGrey1"/>
+
+            <ImageView
+                android:id="@+id/followerfollowing"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/txt_username"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/followerfollowing_icon"/>
+
+            <TextView
+                android:id="@+id/txt_number_of_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/followerfollowing"
+                android:layout_below="@id/txt_username"
+                android:text="@string/unique"
+                android:textColor="@color/whiteGrey" />
+
+            <TextView
+                android:id="@+id/follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/txt_number_of_followers"
+                android:layout_below="@id/txt_username"
+                android:text="@string/followers"
+                android:textColor="@color/whiteGrey" />
+
+            <TextView
+                android:id="@+id/txt_number_of_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/follower"
+                android:layout_below="@id/txt_username"
+                android:text="@string/unique"
+                android:textColor="@color/whiteGrey" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/txt_number_of_following"
+                android:layout_below="@id/txt_username"
+                android:text="@string/following"
+                android:textColor="@color/whiteGrey" />
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/following"
+                android:layout_below="@id/txt_username"
+                android:layout_marginTop="11dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/star_icon"/>
+
+            <TextView
+                android:id="@+id/txt_number_of_repository"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/star"
+                android:layout_below="@id/txt_username"
+                android:text="@string/unique"
+                android:textColor="@color/whiteGrey" />
+
+            <ImageView
+                android:id="@+id/company"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/followerfollowing"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/company_icon"/>
+
+            <TextView
+                android:id="@+id/txt_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/followerfollowing"
+                android:layout_toEndOf="@id/company"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/unique"
                 android:textColor="@color/whiteGrey"/>
 
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="75dp"
-                android:layout_height="25dp"
-                android:layout_below="@id/createdes"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:background="#25833f"
-                android:text="Sign Up"
-                android:textSize="15dp"
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/company"
+                android:src="@drawable/location_icon"/>
+
+            <TextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company"
+                android:layout_toEndOf="@id/location"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/unique"
                 android:textColor="@color/whiteGrey"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hs1"
+                android:layout_below="@id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/dark2">
+
+                    <ImageView
+                        android:id="@+id/overviewIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/overview_icon"/>
+
+                    <TextView
+                        android:id="@+id/overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/overviewIcon"
+                        android:text="Overview"
+                        android:textColor="@color/whiteGrey"/>
+
+                    <ImageView
+                        android:id="@+id/repository_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@id/overview"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/repositories_icon"/>
+
+                    <TextView
+                        android:id="@+id/repository"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/repository_icon"
+                        android:layout_centerVertical="true"
+                        android:text="Repositories·"
+                        android:textColor="@color/whiteGrey"/>
+
+                    <TextView
+                        android:id="@+id/txt_number_of_repository1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/repository"
+                        android:text="@string/unique"
+                        android:textColor="@color/whiteGrey"/>
+
+                    <ImageView
+                        android:id="@+id/projectIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toEndOf="@id/txt_number_of_repository1"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/projects_icon"/>
+
+                    <TextView
+                        android:id="@+id/project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/projectIcon"
+                        android:textColor="@color/whiteGrey"
+                        android:text="Projects"/>
+
+                    <ImageView
+                        android:id="@+id/packageIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@id/project"
+                        android:layout_marginStart="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/packages_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/packageIcon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:text="Packages"
+                        android:textColor="@color/whiteGrey"/>
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hs1"
+                android:layout_marginTop="15dp"
+                android:background="@color/dark2"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/githubicon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/github_icon"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/githubicon"
+                    android:layout_centerHorizontal="true"
+                    android:text="Create your own GitHub profiles"
+                    android:textColor="@color/whiteGrey"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/createdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/create"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Sign up for your own profile on GitHub, the best place to host code, manage projects, and build software alongside 50 million developers."
+                    android:textAlignment="center"
+                    android:textColor="@color/whiteGrey"/>
+
+                <Button
+                    android:id="@+id/btn_signup"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/createdes"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#25833f"
+                    android:text="Sign Up"
+                    android:textColor="@color/whiteGrey"/>
+
+            </RelativeLayout>
 
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/githubicon_bottom"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/github_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/githubicon_bottom"
+                android:layout_marginLeft="10dp"
+                android:text="© 2020 GitHub, Inc."
+                android:textColor="@color/whiteGrey1"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
 
 </ScrollView>
