@@ -8,6 +8,18 @@
     <string name="loading">Loading ...</string>
     <string name="users">Users</string>
     <string name="github">GitHub ·</string>
+    <string name="overview">Overview</string>
+    <string name="repositories">Repositories·</string>
+    <string name="projects">Projects</string>
+    <string name="packages">Packages</string>
+    <string name="create_your_github">Create your own GitHub profiles</string>
+    <string name="create_your_github1">Sign up for your own profile on GitHub, the best place to host code, manage projects, and build software alongside 50 million developers.</string>
+    <string name="signup">Sign Up</string>
+    <string name="github_inc">© 2020 GitHub, Inc.</string>
+    <string name="neww">NEW</string>
+    <string name="neww1">GitHub is now free for teams</string>
+    <string name="neww2">GitHub Free gives teams private repositories with unlimited collaborators at no cost. GitHub Team is now reduced to $4 per user/month.</string>
+    <string name="neww4">Try GitHub Free</string>
     <!-- Other string resources-->
 
     <string-array name="username">

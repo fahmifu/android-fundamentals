@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -49,7 +50,8 @@
                 android:layout_height="15dp"
                 android:layout_below="@id/txt_username"
                 android:layout_marginTop="11dp"
-                android:src="@drawable/followerfollowing_icon"/>
+                android:src="@drawable/followerfollowing_icon"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/txt_number_of_followers"
@@ -104,7 +106,8 @@
                 android:layout_below="@id/txt_username"
                 android:layout_marginTop="11dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/star_icon"/>
+                android:src="@drawable/star_icon"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/txt_number_of_repository"
@@ -123,7 +126,8 @@
                 android:layout_height="15dp"
                 android:layout_below="@id/followerfollowing"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/company_icon"/>
+                android:src="@drawable/company_icon"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/txt_company"
@@ -132,7 +136,7 @@
                 android:layout_below="@+id/followerfollowing"
                 android:layout_toEndOf="@id/company"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
                 android:text="@string/unique"
                 android:textColor="@color/whiteGrey"/>
 
@@ -142,7 +146,8 @@
                 android:layout_height="15dp"
                 android:layout_marginTop="8dp"
                 android:layout_below="@id/company"
-                android:src="@drawable/location_icon"/>
+                android:src="@drawable/location_icon"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/txt_location"
@@ -151,7 +156,7 @@
                 android:layout_below="@id/company"
                 android:layout_toEndOf="@id/location"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
                 android:text="@string/unique"
                 android:textColor="@color/whiteGrey"/>
 
@@ -174,7 +179,8 @@
                         android:layout_height="25dp"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/overview_icon"/>
+                        android:src="@drawable/overview_icon"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/overview"
@@ -182,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/overviewIcon"
-                        android:text="Overview"
+                        android:text="@string/overview"
                         android:textColor="@color/whiteGrey"/>
 
                     <ImageView
@@ -192,7 +198,8 @@
                         android:layout_toEndOf="@id/overview"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/repositories_icon"/>
+                        android:src="@drawable/repositories_icon"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/repository"
@@ -200,7 +207,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/repository_icon"
                         android:layout_centerVertical="true"
-                        android:text="Repositories·"
+                        android:text="@string/repositories"
                         android:textColor="@color/whiteGrey"/>
 
                     <TextView
@@ -219,7 +226,8 @@
                         android:layout_toEndOf="@id/txt_number_of_repository1"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/projects_icon"/>
+                        android:src="@drawable/projects_icon"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/project"
@@ -228,7 +236,7 @@
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/projectIcon"
                         android:textColor="@color/whiteGrey"
-                        android:text="Projects"/>
+                        android:text="@string/projects"/>
 
                     <ImageView
                         android:id="@+id/packageIcon"
@@ -237,21 +245,22 @@
                         android:layout_toEndOf="@id/project"
                         android:layout_marginStart="20dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/packages_icon"/>
+                        android:src="@drawable/packages_icon"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/packageIcon"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
-                        android:text="Packages"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/packages"
                         android:textColor="@color/whiteGrey"/>
                 </RelativeLayout>
             </HorizontalScrollView>
 
-
             <RelativeLayout
+                android:id="@+id/rl_create"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/hs1"
@@ -274,7 +283,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/githubicon"
                     android:layout_centerHorizontal="true"
-                    android:text="Create your own GitHub profiles"
+                    android:text="@string/create_your_github"
                     android:textColor="@color/whiteGrey"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -286,48 +295,98 @@
                     android:layout_below="@id/create"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="Sign up for your own profile on GitHub, the best place to host code, manage projects, and build software alongside 50 million developers."
+                    android:text="@string/create_your_github1"
                     android:textAlignment="center"
                     android:textColor="@color/whiteGrey"/>
 
                 <Button
                     android:id="@+id/btn_signup"
                     android:layout_width="75dp"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_below="@id/createdes"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     android:background="#25833f"
-                    android:text="Sign Up"
-                    android:textColor="@color/whiteGrey"/>
-
+                    android:text="@string/signup"
+                    android:textColor="@color/whiteGrey"
+                    android:textStyle="bold"/>
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_create"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:id="@+id/neww"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/neww"
+                    android:textColor="@color/green1"/>
+
+                <TextView
+                    android:id="@+id/neww1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/neww"
+                    android:text="@string/neww1"
+                    android:textSize="20sp"
+                    android:textColor="@color/whiteGrey"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/neww2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/neww1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/neww2"
+                    android:textColor="@color/whiteGrey"
+                    android:textAlignment="center"/>
+
+                <Button
+                    android:id="@+id/btn_signup2"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/neww2"
+                    android:layout_centerHorizontal="true"
+                    android:background="#0d5cbb"
+                    android:text="@string/neww4"
+                    android:textStyle="bold"
+                    android:textColor="@color/whiteGrey"/>
+            </RelativeLayout>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/githubicon_bottom"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="10dp"
-                android:layout_alignParentBottom="true"
                 android:src="@drawable/github_icon" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/githubicon_bottom"
-                android:layout_marginLeft="10dp"
-                android:text="© 2020 GitHub, Inc."
+                android:layout_marginStart="10dp"
+                android:text="@string/github_inc"
                 android:textColor="@color/whiteGrey1"
-                android:textSize="10sp" />
-
+                android:textSize="13sp" />
         </RelativeLayout>
     </LinearLayout>
-
-
-
 </ScrollView>

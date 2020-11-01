@@ -43,6 +43,7 @@ class Detail: AppCompatActivity(), View.OnClickListener {
         val location: TextView = findViewById(R.id.txt_location)
         val company: TextView = findViewById(R.id.txt_company)
         val signup: Button = findViewById(R.id.btn_signup)
+        val signup1: Button = findViewById(R.id.btn_signup2)
 
         val vAvatar = intent.getIntExtra(EXTRA_AVATAR, 0)
         val vName= intent.getStringExtra(EXTRA_NAME)
@@ -69,11 +70,17 @@ class Detail: AppCompatActivity(), View.OnClickListener {
             .into(avatar)
 
         signup.setOnClickListener(this)
+        signup1.setOnClickListener(this)
     }
 
     override fun onClick(v: View?){
         when(v?.id) {
             R.id.btn_signup -> {
+                val Url = "https://github.com/join"
+                val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse("$Url"))
+                startActivity(moveIntent)
+            }
+            R.id.btn_signup2 -> {
                 val Url = "https://github.com/join"
                 val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse("$Url"))
                 startActivity(moveIntent)
