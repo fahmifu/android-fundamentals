@@ -23,8 +23,10 @@ class Detail: AppCompatActivity(), View.OnClickListener {
 
         //change actionbar text
         val a = supportActionBar
-        a!!.title = "Users Detail"
-        a.setDisplayHomeAsUpEnabled(true)
+        a?.apply {
+            title = "Users Detail"
+            setDisplayHomeAsUpEnabled(true)
+        }
 
         //identify each item in detail_activity.xml
         val avatar: CircleImageView = findViewById(R.id.img_photo)
@@ -43,19 +45,21 @@ class Detail: AppCompatActivity(), View.OnClickListener {
         val v = intent.getParcelableExtra<User>(EXTRA_USERDATA)
 
         //sent value to each item in detail_activity.xml
-        name.text = v!!.name
-        username.text = v.username
-        followers.text = v.followers
-        following.text = v.following
-        repository.text = v.repository
-        repository1.text = v.repository
-        location.text = v.location
-        company.text = v.company
-        //using glide for image (avatar)
-        Glide.with(this)
-            .load(v.avatar)
-            .apply(RequestOptions())
-            .into(avatar)
+        v?.let {
+            name.text = it.name
+            username.text = it.username
+            followers.text = it.followers
+            following.text = it.following
+            repository.text = it.repository
+            repository1.text = it.repository
+            location.text = it.location
+            company.text = it.company
+            //using glide for image (avatar)
+            Glide.with(this)
+                .load(it.avatar)
+                .apply(RequestOptions())
+                .into(avatar)
+        }
 
         signup.setOnClickListener(this)
         signup1.setOnClickListener(this)
