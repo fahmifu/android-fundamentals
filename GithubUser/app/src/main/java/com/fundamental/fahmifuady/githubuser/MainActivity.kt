@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     //get data each category
-    private fun addItem() {
-
+    private fun addItem(): ArrayList1<User> {
+        val listUser = ArrayList1<User>()
         for (position in dataName.indices) {
             val user = User(
                 dataAvatar.getResourceId(position,-1),
@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             )
             users.add(user)
         }
+        return listUser
     }
 
     //showing data

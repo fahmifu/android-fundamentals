@@ -14,19 +14,13 @@ import de.hdodenhof.circleimageview.CircleImageView
 class Detail: AppCompatActivity(), View.OnClickListener {
 
     companion object {
-        const val EXTRA_NAME = "extra_name"
-        const val EXTRA_USERNAME = "extra_username"
-        const val EXTRA_AVATAR = "extra_avatar"
-        const val EXTRA_FOLLOWERS = "extra_followers"
-        const val EXTRA_FOLLOWING = "extra_following"
-        const val EXTRA_REPOSITORY = "extra_repository"
-        const val EXTRA_LOCATION = "extra_location"
-        const val EXTRA_COMPANY = "extra_company"
+        const val EXTRA_USERDATA = "extra_userdata"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_activity)
+
         //change actionbar text
         val a = supportActionBar
         a!!.title = "Users Detail"
@@ -45,27 +39,21 @@ class Detail: AppCompatActivity(), View.OnClickListener {
         val signup: Button = findViewById(R.id.btn_signup)
         val signup1: Button = findViewById(R.id.btn_signup2)
 
-        val vAvatar = intent.getIntExtra(EXTRA_AVATAR, 0)
-        val vName= intent.getStringExtra(EXTRA_NAME)
-        val vUsername= intent.getStringExtra(EXTRA_USERNAME)
-        val vFollowers= intent.getStringExtra(EXTRA_FOLLOWERS)
-        val vFollowing= intent.getStringExtra(EXTRA_FOLLOWING)
-        val vRepository= intent.getStringExtra(EXTRA_REPOSITORY)
-        val vLocation= intent.getStringExtra(EXTRA_LOCATION)
-        val vCompany= intent.getStringExtra(EXTRA_COMPANY)
+        //get data from parcelable
+        val v = intent.getParcelableExtra<User>(EXTRA_USERDATA)
 
         //sent value to each item in detail_activity.xml
-        name.text = vName
-        username.text = vUsername
-        followers.text = vFollowers
-        following.text = vFollowing
-        repository.text = vRepository
-        repository1.text = vRepository
-        location.text = vLocation
-        company.text = vCompany
+        name.text = v!!.name
+        username.text = v.username
+        followers.text = v.followers
+        following.text = v.following
+        repository.text = v.repository
+        repository1.text = v.repository
+        location.text = v.location
+        company.text = v.company
         //using glide for image (avatar)
         Glide.with(this)
-            .load(vAvatar)
+            .load(v.avatar)
             .apply(RequestOptions())
             .into(avatar)
 
@@ -76,13 +64,13 @@ class Detail: AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?){
         when(v?.id) {
             R.id.btn_signup -> {
-                val Url = "https://github.com/join"
-                val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse("$Url"))
+                val url = "https://github.com/join"
+                val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(moveIntent)
             }
             R.id.btn_signup2 -> {
-                val Url = "https://github.com/join"
-                val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse("$Url"))
+                val url = "https://github.com/join"
+                val moveIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(moveIntent)
             }
         }

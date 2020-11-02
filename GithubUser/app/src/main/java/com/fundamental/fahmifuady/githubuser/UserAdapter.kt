@@ -33,14 +33,7 @@ class UserAdapter (private var users: ArrayList<User>): RecyclerView.Adapter<Use
 
         view.itemView.setOnClickListener{
             val moveToDetail = Intent(mContext, Detail::class.java)
-            moveToDetail.putExtra(Detail.EXTRA_NAME, user.name)
-            moveToDetail.putExtra(Detail.EXTRA_USERNAME, user.username)
-            moveToDetail.putExtra(Detail.EXTRA_FOLLOWERS, user.followers)
-            moveToDetail.putExtra(Detail.EXTRA_FOLLOWING, user.following)
-            moveToDetail.putExtra(Detail.EXTRA_REPOSITORY, user.repository)
-            moveToDetail.putExtra(Detail.EXTRA_LOCATION, user.location)
-            moveToDetail.putExtra(Detail.EXTRA_COMPANY, user.company)
-            moveToDetail.putExtra(Detail.EXTRA_AVATAR, user.avatar)
+            moveToDetail.putExtra(Detail.EXTRA_USERDATA, user)
             mContext.startActivity(moveToDetail)
         }
     }
