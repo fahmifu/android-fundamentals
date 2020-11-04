@@ -21,7 +21,11 @@
         android:id="@+id/categoryFragment"
         android:name="com.fundamental.fahmifuady.mynavigation.CategoryFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_detailCategoryFragment"
+            app:destination="@id/detailCategoryFragment" />
+    </fragment>
     <activity
         android:id="@+id/profileActivity"
         android:name="com.fundamental.fahmifuady.mynavigation.ProfileActivity"
