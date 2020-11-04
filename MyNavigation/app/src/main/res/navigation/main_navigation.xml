@@ -15,4 +15,9 @@
         android:name="com.fundamental.fahmifuady.mynavigation.CategoryFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_category" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.fundamental.fahmifuady.mynavigation.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
 </navigation>
