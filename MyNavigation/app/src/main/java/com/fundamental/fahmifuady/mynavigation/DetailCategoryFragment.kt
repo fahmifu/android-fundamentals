@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_detail_category.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -67,5 +68,8 @@ class DetailCategoryFragment : Fragment() {
         tv_category_name.setText(dataName)
         tv_category_description.setText("Stock : $dataDescription")
 
+        btn_profile.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_detailCategoryFragment_to_homeFragment)
+        )
     }
 }
